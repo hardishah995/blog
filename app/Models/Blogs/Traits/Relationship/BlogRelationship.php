@@ -34,4 +34,12 @@ trait BlogRelationship
     {
         return $this->belongsTo(User::class, 'created_by');
     }
+
+    /**
+     * Blogs hasMany with comments
+     */
+    // public function comments()
+    // {
+    //     return $this->hasMany(Comment::class);
+    // }
 }

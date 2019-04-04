@@ -19,7 +19,7 @@ class PostsController extends Controller
     public function index()
     {
         $post       = Blog::latest()->where('status','published')->paginate(5);
-        $categories = BlogCategory::orderBy('id','asc')->where('status',1)->with('blogs')->get();
+        $categories = BlogCategory::orderBy('id','asc')->where('status',1)->withCount('blogs')->get();
         $tags       = BlogTag::orderBy('id','asc')->where('status',1)->get();
         
         return view('frontend.index',compact('post','categories','tags'));

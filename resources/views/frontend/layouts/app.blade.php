@@ -49,14 +49,14 @@
         <div class="container">
                 <!--centers the content between from header to footer-->
                 <header  class="clearfix">
-                    <h1 class="left"><span>Global</span>Vincitore</h1>
+                    <h1 class="left"><img src="{{asset('css/images/iOS_banner.png')}} "></h1>
                 </header>
                 <nav>
                     <ul>
-                        <li class="active"><a href="">Home</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li ><a href="http://localhost:8000/pages/home">Home</a></li>
+                        <li class="active"><a href="http://localhost:8000/">Blog</a></li>
+                        <li ><a href="http://localhost:8000/pages/about-us">About</a></li>
+                        <li ><a href="http://localhost:8000/pages/contact-us">Contact</a></li>
                         @if ($logged_in_user)
                         <li>{{ link_to_route('frontend.user.dashboard', trans('navs.frontend.dashboard')) }}</li>
                         @endif
@@ -92,22 +92,21 @@
             <footer class="clearfix">
   <div class="container">
     <div class="about span-6 append-1">
-      <h3>About Serablog</h3>
-      <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet orem ipsum dolor sit amet, consetetur sadipscing eli</p>
+      <h3>About Global Vincitore</h3>
+      <p>A team of technology enthusiasts, creative designers, software engineers and marketers who are translating clients Ideas in to realities and delivering best results since 3 years</p>
     </div>
-    <div id="tweets" class="span-6 append-1">
-      <h3>Latest tweets</h3>
-      <div class="one_tweet">
-        <p>sit amet orem ipsum dolor sit amet, consetetur sadipscing </p>
-        <a href="#">http://t.co/#####</a>
-        <div class="date">03 March 2013</div>
-      </div>
-      <div class="one_tweet">
-        <p>sit amet orem ipsum dolor sit amet</p>
-        <a href="#">http://t.co/#####</a>
-        <div class="date">03 March 2013</div>
-      </div>
+    <div id="social" class="span-6 append-1">
+      <h3 align="center">Social Accounts</h3>
+      
+    <ul class="social-icon">
+        <li><a href="#" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="#" target="_blank" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="#" target="_blank" class="rss"><i class="fa fa-rss"></i></a></li>
+    </ul>
     </div>
+      
     <div id="footer_form" class="span-10 last clearfix">
       <h3>Contact us</h3>
       <form action="#">
@@ -129,7 +128,8 @@
       </form>
     </div>
     <hr>
-    Copyright 2013 by <b>SITE INC</b>, all rights reserved <span class="right last">Design by: <a href="http://www.ws-templates.com">ws-templates</a></span></div>
+    
+    © 2019  <b>GLOBAL VINCITORE</b>.All rights reserved. </div>
 </footer>
 
         <!-- Scripts -->
@@ -146,6 +146,18 @@
                 $.session.clear();
             }
         </script>
+        <script type="text/javascript">
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/5c8b98f9c37db86fcfce07a6/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            })();
+        </script>
+        <!--End of Tawk.to Script-->
         @include('includes.partials.ga')
 
     </body>

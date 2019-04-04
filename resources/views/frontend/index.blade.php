@@ -8,18 +8,18 @@
         @foreach($post as $posts)
       <article>
         <div class="date span-3">{{$posts->publish_datetime}}</div>
-        <h2><a href="#">{{$posts->name}}</a></h2>
+        <h2><a href="">{{$posts->name}}</a></h2>
         <div class="metadata">
           <ul>
-            <li>posted by <a href="#">{{$posts->created_by}}</a></li>
-            <li>  <a href="#">a></li>
+            <li></li>
+            <li>  <a href="#"></a></li>
             <li><a href="#">comments</a></li>
           </ul>
         </div>
         
         <img src="{{ asset('storage/img/blog/'.$posts->featured_image) }}" alt="">
-        {!! $posts->content !!}
-        <!-- <div class="more"><a href="#">Read more ...</a></div> -->
+        {!! str_limit($posts->content,200) !!}
+        <div class="more"><a href="#">Read more ...</a></div>
       </article>
         @endforeach
       @endif

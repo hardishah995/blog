@@ -5,7 +5,7 @@
         <div class="col-lg-10">
             {{ Form::text('name', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.blogs.title'), 'required' => 'required']) }}
         </div><!--col-lg-10-->
-    </div><!--form control-->
+    </div><!--form control-->   
 
     <div class="form-group">
         {{ Form::label('categories', trans('validation.attributes.backend.blogs.category'), ['class' => 'col-lg-2 control-label required']) }}

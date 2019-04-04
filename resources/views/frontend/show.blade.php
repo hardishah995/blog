@@ -9,8 +9,8 @@
         <div class="date span-3">{{$post->publish_datetime}}</div>
         <h2><a href="#">{{$post->name}}</a></h2>
         
-        <img style="width:20%" src="{{ asset('storage/img/blog/'.$post->featured_image) }}" alt="">
-        <p>{{ $post->content }}</p>
+        <img src="{{ asset('storage/img/blog/'.$post->featured_image) }}" alt="">
+        <p>{!! $post->content !!}</p>
         <!-- <div class="more"><a href="#">Read more ...</a></div> -->
       </article>
         @endforeach 

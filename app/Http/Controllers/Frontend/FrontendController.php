@@ -37,10 +37,9 @@ class FrontendController extends Controller
     public function showPage($slug, PagesRepository $pages)
     {
         $result = $pages->findBySlug($slug);
+        $post   = Blog::latest()->where('status','published')->paginate(3);
 
-        return view('frontend.pages.index')
+        return view('frontend.pages.index',compact('post'))
             ->withpage($result);
     }
-
-    
 }
